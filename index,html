@@ -1,0 +1,129 @@
+<!-- Khối thông tin về Cody Nam Võ & Trình phát nhạc -->
+<section class="cody-profile-card">
+  <div class="cody-header">
+    <div class="cody-avatar">
+      <img src="https://via.placeholder.com/150" alt="Cody Nam Võ">
+    </div>
+    <div class="cody-info">
+      <h2>Cody Nam Võ</h2>
+      <p class="cody-role">Ca sĩ / Rapper / Dancer</p>
+      <p class="cody-bio">
+        Cody Nam Võ (tên thật là Võ Đình Nam) là nam ca sĩ, rapper tài năng nổi tiếng với phong cách trình diễn ấn tượng, vũ đạo mượt mà cùng nhiều bản hit sôi động.
+      </p>
+    </div>
+  </div>
+
+  <!-- Trình phát nhạc nền -->
+  <div class="cody-music-player">
+    <div class="music-details">
+      <span class="music-icon">🎵</span>
+      <span class="song-title">Cody Nam Võ - Bài Hát Nổi Bật</span>
+    </div>
+    <audio id="audio-source" src="https://files.catbox.moe/181jyl.mp3" loop></audio>
+    <button id="play-btn" class="play-button">▶ Phát nhạc</button>
+  </div>
+</section>
+
+<style>
+.cody-profile-card {
+  background: #18181c;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cody-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cody-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff2a75;
+}
+
+.cody-info h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.6rem;
+  color: #ff2a75;
+}
+
+.cody-role {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.cody-bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #dddddd;
+}
+
+.cody-music-player {
+  background: rgba(255, 42, 117, 0.1);
+  border: 1px solid rgba(255, 42, 117, 0.3);
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.play-button {
+  background: #ff2a75;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.play-button:hover {
+  background: #e01b63;
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .cody-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+  const audio = document.getElementById('audio-source');
+  const playBtn = document.getElementById('play-btn');
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸ Tạm dừng';
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶ Phát nhạc';
+    }
+  });
+</script>
