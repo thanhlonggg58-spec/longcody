@@ -379,3 +379,67 @@
     </script>
 </body>
 </html>
+v class="song-info">
+    <div class="song-title">Tên bài hát</div>
+    <div class="artist-name">Cody Nam Võ</div>
+  </div>
+  
+  <audio id="audio-source" src="https://files.catbox.moe/181jyi.mp3"></audio>
+
+  <div class="player-controls">
+    <button id="play-btn" class="control-btn">▶ Play</button>
+  </div>
+</div>
+
+<style>
+.music-player {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+}
+.song-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.artist-name {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+.control-btn {
+  background: #ff0055;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.control-btn:hover {
+  background: #e0004c;
+  transform: scale(1.05);
+}
+</style>
+
+<script>
+  const audio = document.getElementById('audio-source');
+  const playBtn = document.getElementById('play-btn');
+
+  playBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = '⏸ Pause';
+    } else {
+      audio.pause();
+      playBtn.textContent = '▶ Play';
+    }
+  });
+</script>
