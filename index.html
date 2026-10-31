@@ -1,14 +1,15 @@
-<!-- Khối thông tin về Cody Nam Võ & Trình phát nhạc -->
+<!-- Khối thông tin chi tiết về Cody Nam Võ -->
 <section class="cody-profile-card">
+  <!-- Đầu trang: Avatar & Thông tin cá nhân -->
   <div class="cody-header">
     <div class="cody-avatar">
-      <img src="https://via.placeholder.com/150" alt="Cody Nam Võ">
+      <img src="https://i.ibb.co/C0mP9jS/cody-nam-vo.jpg" alt="Cody Nam Võ">
     </div>
     <div class="cody-info">
       <h2>Cody Nam Võ</h2>
-      <p class="cody-role">Ca sĩ / Rapper / Dancer</p>
+      <p class="cody-role">Ca sĩ / Rapper / Dancer / Producer</p>
       <p class="cody-bio">
-        Cody Nam Võ (tên thật là Võ Đình Nam) là nam ca sĩ, rapper tài năng nổi tiếng với phong cách trình diễn ấn tượng, vũ đạo mượt mà cùng nhiều bản hit sôi động.
+        Cody Nam Võ (tên thật là Võ Đình Nam) là nam ca sĩ, rapper tài năng nổi tiếng với phong cách trình diễn cuốn hút, vũ đạo mượt mà cùng khả năng sáng tác ấn tượng. Anh ghi dấu ấn mạnh mẽ qua các chương trình truyền hình thực tế đình đám như <strong>Anh Trai "Say Hi"</strong> và <strong>2 Ngày 1 Đêm</strong>.
       </p>
     </div>
   </div>
@@ -17,10 +18,56 @@
   <div class="cody-music-player">
     <div class="music-details">
       <span class="music-icon">🎵</span>
-      <span class="song-title">Cody Nam Võ - Bài Hát Nổi Bật</span>
+      <span id="current-song-title" class="song-title">Cody Nam Võ - Tinh Hà (Anh Trai "Say Hi")</span>
     </div>
-    <audio id="audio-source" src="https://files.catbox.moe/c8zbaj.mp3" loop></audio>
+    <audio id="audio-source" src="https://files.catbox.moe/181jyl.mp3" loop></audio>
     <button id="play-btn" class="play-button">▶ Phát nhạc</button>
+  </div>
+
+  <!-- Section: Bài hát nổi bật -->
+  <div class="cody-section">
+    <h3>🔥 Bài Hát & Bắn Hit Nổi Bật</h3>
+    <ul class="song-list">
+      <li><span>Tinh Hà</span> <span class="badge highlight">Anh Trai "Say Hi"</span></li>
+      <li><span>Cử Mấy Là Vừa</span> <span class="badge">EP Solo</span></li>
+      <li><span>Ảo Giác</span> <span class="badge">EP Cử Mấy Là Vừa</span></li>
+      <li><span>Nói Lời Dối Theo Một Cách Thật Lòng</span> <span class="badge">Single Hit</span></li>
+      <li><span>Yêu Yêu Bối Rối</span> <span class="badge">Single</span></li>
+      <li><span>Bởi Vì Sức Đẩy Bụi Mịn</span> <span class="badge">Single</span></li>
+    </ul>
+  </div>
+
+  <!-- Section: Show truyền hình & Cột mốc nổi bật -->
+  <div class="cody-section">
+    <h3>🌟 Show Truyền Hình & Cột Mốc Tiêu Biểu</h3>
+    <ul class="activity-list">
+      <li><strong>Anh Trai "Say Hi":</strong> Tạo nên sức hút lớn qua các tiết mục bùng nổ như <em>Tinh Hà</em>, khẳng định tư duy âm nhạc hiện đại, kĩ năng rap, vũ đạo đỉnh cao và khả năng làm việc nhóm tuyệt vời.</li>
+      <li><strong>2 Ngày 1 Đêm (Mùa Lễ Hội / Khách mời):</strong> Mang đến làn gió trẻ trung, năng động, lăn xả hết mình cùng sự duyên dáng, hài hước làm hài lòng đông đảo khán giả truyền hình.</li>
+      <li><strong>Dự án Solo & EP "Cử Mấy Là Vừa":</strong> Đánh dấu bước tiến độc lập với chất nhạc R&B/Pop/Hip-hop bắt tai, tự sáng tác và định hình phong cách cá nhân rõ nét.</li>
+      <li><strong>Lĩnh vực hoạt động:</strong> Biểu diễn Live Concert, sáng tác nhạc, vũ công chuyên nghiệp và sản xuất âm nhạc.</li>
+    </ul>
+  </div>
+
+  <!-- Section: Lịch trình & Lịch biểu diễn sắp tới -->
+  <div class="cody-section">
+    <h3>📅 Lịch Trình & Sự Kiện Biểu Diễn</h3>
+    <div class="schedule-table">
+      <div class="schedule-row header">
+        <span>Thời gian</span>
+        <span>Sự kiện / Lịch trình</span>
+        <span>Địa điểm</span>
+      </div>
+      <div class="schedule-row">
+        <span>Sắp diễn ra</span>
+        <span>Concert / Đêm nhạc Anh Trai "Say Hi"</span>
+        <span>TP. Hồ Chí Minh</span>
+      </div>
+      <div class="schedule-row">
+        <span>Đang cập nhật</span>
+        <span>Sự kiện Âm nhạc / Fan Meeting</span>
+        <span>Hà Nội</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -28,11 +75,11 @@
 .cody-profile-card {
   background: #18181c;
   color: #ffffff;
-  max-width: 600px;
+  max-width: 680px;
   margin: 30px auto;
   padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -45,16 +92,17 @@
 }
 
 .cody-avatar img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff2a75;
+  box-shadow: 0 0 15px rgba(255, 42, 117, 0.4);
 }
 
 .cody-info h2 {
   margin: 0 0 5px 0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #ff2a75;
 }
 
@@ -72,13 +120,14 @@
 }
 
 .cody-music-player {
-  background: rgba(255, 42, 117, 0.1);
+  background: rgba(255, 42, 117, 0.12);
   border: 1px solid rgba(255, 42, 117, 0.3);
   padding: 12px 20px;
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
 }
 
 .music-details {
@@ -105,10 +154,86 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 480px) {
+.cody-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cody-section h3 {
+  font-size: 1.1rem;
+  color: #ff2a75;
+  margin-bottom: 12px;
+}
+
+.song-list, .activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 6px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  background: rgba(255, 42, 117, 0.2);
+  color: #ff2a75;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.badge.highlight {
+  background: #ff2a75;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.activity-list li {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.schedule-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.2fr;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.schedule-row.header {
+  background: rgba(255, 42, 117, 0.2);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media (max-width: 520px) {
   .cody-header {
     flex-direction: column;
     text-align: center;
+  }
+  .schedule-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
 </style>
